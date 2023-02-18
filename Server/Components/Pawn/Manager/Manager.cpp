@@ -628,6 +628,8 @@ is `2`.
 	}
 	if (isEntryScript)
 	{
+		script.Call("OnPlayerDisconnect", DefaultReturnValue_False,  player.getID(), int(reason));
+		CallInSides("OnPlayerDisconnect", DefaultReturnValue_False,  player.getID(), int(reason));
 		script.Call("OnGameModeExit", DefaultReturnValue_False);
 		CallInSides("OnGameModeExit", DefaultReturnValue_False);
 	}
